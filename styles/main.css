@@ -1,0 +1,159 @@
+
+/* Header Stylesheets */
+.user-info {
+    min-width: 91px;
+    text-align: center;
+    margin: auto 10px;
+}
+
+.user-info p{
+    color: white;
+    margin: 4px;
+}
+
+/* Main Stylesheets */
+#home {
+    width: 60%;
+    min-width: 620px;
+    padding: 25px 15px 25px 50px;
+    border: solid 1px rgb(66, 110, 141);
+    border-radius: 4px;
+    background-image: linear-gradient(to right, rgba(82, 104, 137, 0.6), rgba(150, 157, 173, 0.6));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#home h1 {
+    color: #e2e2e2;
+    font-size: 2rem;
+}
+
+#home p {
+    color: #e2e2e2;
+    font-size: 1.5rem;
+}
+
+#home h1, #home p {
+    margin-left: 20%;
+}
+
+#home span{
+    color: white;
+    font-size: 2.3rem;
+}
+
+#productos{
+    margin-top: 20px;
+}
+
+#productos h1{
+    text-align: center;
+}
+
+.product-card{
+    width: 292px;
+    height: 476px;
+    padding: 15px;
+    border: 1px grey solid;
+    border-radius: 6px;
+    margin: 20px;
+}
+
+.product-card p{
+    text-align: justify;
+    color: rgb(104, 104, 104);
+    font-family: 'Roboto', sans-serif;
+}
+
+.form {
+    padding: 25px 15px 25px 50px;
+    border: solid 1px rgb(230, 230, 230);
+    border-radius: 4px;
+    background-image: linear-gradient(to right, rgb(246, 246, 246), rgb(236, 236, 236));
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+form h1 {
+    margin: 0;
+}
+
+input {
+    width: 85%;
+    height: 30px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+    text-indent: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.primary-btn {
+    padding: 12px;
+    border: 1px solid #57a5e0;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #57a5e0; 
+    transition: 0.8s;
+}
+
+.primary-btn:hover {
+    border: 1px solid #0e95fc;
+    background-color: #0e95fc; 
+}
+
+.secundary-btn {
+    padding: 10px;
+    border: 1px solid #7ec6fd;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #7ec6fd; 
+    transition: 0.8s;
+}
+
+.secundary-btn:hover {
+    border: 1px solid #5ea7df;
+    background-color: #5ea7df; 
+}
+
+.form a:hover {
+    color: rgb(184, 184, 184);
+}
+
+/* Footer Stylesheets */
+footer {
+    background-color: #850031;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* Errors/Success Stylesheets */
+.error {
+    width: 92%; 
+    margin: 0px auto; 
+    margin-bottom: 2rem;
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    border-radius: 5px; 
+    text-align: left;
+}
+
+.success {
+color: #3c763d; 
+background: #dff0d8; 
+border: 1px solid #3c763d;
+margin-bottom: 20px;
+}
+
+.product-cards {
+    padding: 12px;
+    border: #ccc solid 1px;
+    border-radius: 8px;
+}
+

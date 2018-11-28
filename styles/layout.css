@@ -1,0 +1,189 @@
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+/* body {
+    min-height: 100vh;
+    overflow: auto;
+    margin: 0;
+} */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    min-width: 100%;
+  }
+
+/* Header Stylesheets */
+header {
+    max-height: min-content;
+    padding: 10px 40px;
+    margin-bottom: 2rem;
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.logo-area {
+    display: flex;
+}
+
+.logo-area span{
+    margin: auto;
+    padding: 0 15px;
+}
+
+.logo {
+    height: 58px;
+    width: 69px;
+}
+
+.header h1 {
+    text-align: center;
+    align-self: center;
+    margin: auto;
+}
+
+.menu-area {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.menu {
+    padding: 0 24px;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+}
+
+.menu li, .menu a {
+    padding: 12px 4px;
+    text-align: center;
+    list-style-type: none;
+    color: #c3c3c3;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.menu a {
+    font-size: 1.3rem;
+    min-width: 100px;
+    width: 20%;
+}
+
+.menu a:hover{
+    color:white;
+}
+
+/* Main Stylesheets */
+
+.container {
+    min-height: 100vh;
+	display: flex;
+    flex-direction: column;
+    background:
+    linear-gradient(
+        rgba(0, 46, 72, 0.45), 
+        rgba(0, 86, 136, 0.45)
+    ),
+    url("../Images/home.jpeg") no-repeat right top;
+    background-size: cover;
+}
+
+.area-productos{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+form {
+    grid-column: 2;
+    margin: auto;
+}
+
+.form {
+    margin-top: 15%;
+    margin-bottom: 15%;
+    width: 405px;
+    display: grid;
+    align-content: center;
+    clear:both;
+}
+
+#home {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 15%;
+    display: flex;
+    flex-flow: column wrap;
+    clear:both;
+}
+
+@media only screen and (max-width: 768px) {
+    .form {
+        width: 235px;
+    }
+}
+
+.form h1 {
+    grid-row: 1;
+}
+
+.form hr {
+    grid-row: 2;
+}
+
+#uname-label {
+    grid-row: 3;
+}
+
+#uname-input {
+    grid-row: 4;
+}
+
+#pass-label {
+    grid-row: 5;
+}
+
+#pass-input {
+    grid-row: 6;
+}
+
+.login-buttons {
+    grid-row: 7;
+    margin-top: 10px;
+}
+
+.register-buttons {
+    margin-top: 10px;
+}
+
+.login-buttons a {
+    margin: auto;
+}
+
+input {
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+.products-area {
+    height: auto;
+    min-height: min-content;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Footer Stylesheets */
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
