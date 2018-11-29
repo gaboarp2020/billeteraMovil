@@ -80,6 +80,10 @@ header {
     color:white;
 }
 
+.menu li:active, .menu a:active{
+    color: #850031;
+}
+
 /* Main Stylesheets */
 
 .container {
@@ -117,7 +121,7 @@ form {
     clear:both;
 }
 
-#home {
+.box {
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 15%;
@@ -174,11 +178,9 @@ input {
     margin-bottom: 20px;
 }
 
-.products-area {
-    height: auto;
-    min-height: min-content;
+#sendForm {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
 }
 
 /* Footer Stylesheets */

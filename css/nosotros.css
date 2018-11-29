@@ -1,0 +1,50 @@
+.fondo{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url("../Images/nosotros\ \(1\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+li a {
+    color: rgb(73, 73, 73);
+    font-weight: bold;
+}
+li a:hover{
+    color:#850031;
+}
+h2{
+    color: black;
+}
+.btn-purple{
+    background: #850031;
+    color: white;
+}
+.banner-content{
+    padding-top: 5%;
+    text-align: center;
+}
+header{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+.logo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.info-nosotros{
+    background: #c2c2c236;
+}
+footer {
+    background-color: #850031;
+    width: 100%;
+    height: 40px;
+}
+
+footer p {
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    margin: 0;
+}

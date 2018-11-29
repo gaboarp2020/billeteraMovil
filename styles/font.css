@@ -14,7 +14,7 @@ header h1 span {
 }
 
 h1, h2, h3, h4, h5, footer, label, span {
-    color: white;
+    color: rgb(216, 216, 216);
 }
 
 span {
@@ -31,11 +31,15 @@ span {
 }
 
 .primary-btn {
-    color: aliceblue;
+    color: rgb(216, 216, 216);
 }
 
 .secundary-btn {
-    color: white;
+    color: rgb(216, 216, 216);
+}
+
+footer p {
+    font-size: 1rem;
 }
 
 

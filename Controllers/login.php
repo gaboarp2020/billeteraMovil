@@ -20,7 +20,7 @@
 
                 $_SESSION['username'] = $username;
                 $_SESSION['success']  = "Has iniciado sesión con éxito";
-                header('location: Views/home.php');	
+                header('location: ../Views/home.php');	
 
             }else{
                 array_push($errors, "Usuario o contraseña incorrecta");

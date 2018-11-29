@@ -26,7 +26,6 @@
             if ($user['username'] === $username) {
                 array_push($errors, "Este usuario ya esta en uso");
             }
-    
             if ($user['email'] === $email) {
                 array_push($errors, "Este email ya fué registrado");
             }
@@ -41,7 +40,7 @@
             mysqli_query($db, $query);
             $_SESSION['username'] = $username;
             $_SESSION['success'] = "Has iniciado sesión con éxito";
-            header('location: ../index.php');
+            header('location: login.php');
         }
     }
 ?>
