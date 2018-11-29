@@ -30,7 +30,7 @@
                 VALUES('$senderId', '$receiverId', '$amount', 1)";
 
                 if ($db->query($query) === TRUE) {
-                    array_push($success, "New record created successfully");
+                    array_push($success, "Transacción realizada con éxito");
                 }
 
                 $senderTotal = $senderBalance - $amount;

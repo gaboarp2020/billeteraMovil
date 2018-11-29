@@ -140,7 +140,8 @@ footer p {
 
 /* Errors/Success Stylesheets */
 .error {
-    width: 30%; 
+    width: 40%;
+    min-width: 240px; 
     margin: 0 auto; 
     margin-bottom: 2rem;
     padding: 10px; 
@@ -151,8 +152,13 @@ footer p {
     text-align: center;
 }
 
+.error p{
+    color: #a94442;
+}
+
 .success {
 width: 30%; 
+min-width: 290px; 
 color: #3c763d; 
 background: #dff0d8; 
 border: 1px solid #3c763d;

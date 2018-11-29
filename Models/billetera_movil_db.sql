@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-11-2018 a las 09:56:49
--- Versión del servidor: 10.1.35-MariaDB
--- Versión de PHP: 7.2.9
+-- Tiempo de generación: 29-11-2018 a las 21:34:57
+-- Versión del servidor: 10.1.36-MariaDB
+-- Versión de PHP: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -65,7 +65,10 @@ INSERT INTO `transactions` (`pk_transaction`, `fk_sender`, `fk_receiver`, `amoun
 (29, 1, 2, 0, '2018-11-29 07:37:29', 1),
 (30, 1, 2, 0, '2018-11-29 07:37:41', 1),
 (31, 1, 2, 0, '2018-11-29 07:38:04', 1),
-(32, 1, 2, 0, '2018-11-29 07:47:07', 1);
+(32, 1, 2, 0, '2018-11-29 07:47:07', 1),
+(33, 3, 4, 10000, '2018-11-29 14:16:22', 1),
+(34, 3, 1, 5467.34, '2018-11-29 19:29:58', 1),
+(35, 3, 1, 1, '2018-11-29 19:32:26', 1);
 
 -- --------------------------------------------------------
 
@@ -108,8 +111,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`pk_user`, `username`, `password`, `first_name`, `last_name`, `email`, `phone`, `balance`) VALUES
-(1, 'gaboarp2020', '0f1ecb9b1a62a9935b2e78305e56b6bf', 'Gabriel', 'Ron', 'gaboarp2020@gmail.com', '04121781019', 16037),
-(2, 'prueba', 'e10adc3949ba59abbe56e057f20f883e', 'prueba', 'prueba', 'prueba@gmail.com', '123456789', 502);
+(1, 'gaboarp2020', '0f1ecb9b1a62a9935b2e78305e56b6bf', 'Gabriel', 'Ron', 'gaboarp2020@gmail.com', '04121781019', 22505.3),
+(2, 'prueba', 'e10adc3949ba59abbe56e057f20f883e', 'prueba', 'prueba', 'prueba@gmail.com', '123456789', 502),
+(3, 'juancpaiva', 'bbf46bf8d205a3f6f38c82113112c855', 'Juan', 'Paiva', 'jpaivaalcala@gmail.com', '04164263689', 4531.66),
+(4, 'henrylingg', '078e30e519b4ae71fc99366543b8eab4', 'Henry', 'Nuzzo', 'nuzzohenry@gmail.com', '04126374528', 10000);
 
 --
 -- Índices para tablas volcadas
@@ -144,7 +149,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `transactions`
 --
 ALTER TABLE `transactions`
-  MODIFY `pk_transaction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `pk_transaction` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `transactions_types`
@@ -156,7 +161,7 @@ ALTER TABLE `transactions_types`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `pk_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `pk_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas

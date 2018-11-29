@@ -78,7 +78,6 @@
                             <tr>
                                 <td>
                                     <?php
-                                        require '../Controllers/conexion.php';
 
                                         $username = $_SESSION['username'];
 
@@ -129,19 +128,42 @@
                     <div id="seccion-2" class="tabs-contents-item d-none">
                         <h1><span>Enviar saldo</span></h1>
                         <p>Introduzca el E-mail del destinatario y la cantidad a transferir</p>
+                        <table>
+                            <tr>
+                                <td>Saldo:</td>
+                                <td>
+                                    <?php
+                                        $username = $_SESSION['username'];
+
+                                        $sql = "SELECT balance FROM users WHERE username = '$username' ";
+
+                                        $result = $db->query($sql);
+                                        // echo $username;
+                                        while ($row = $result->fetch_assoc()) {
+                                            echo $row['balance']." Bs";
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                        </table>
                         <form id="sendForm" action="home.php" method="POST">
                             <label>Destinatario (E-mail)</label>
                             <input type="text" name="fk_receiver" value="" required>
                             <label>Cantidad a enviar</label>
                             <input type="text" name="amount" value="" required>
-                            <button type="submit" class="primary-btn" name="sendFund">Enviar</button>
+                            <div class="send-buttoms">
+                                <button type="submit" class="primary-btn" name="sendFund">Enviar</button>
+                            </div>
                         </form>
                     </div>
                     <div id="seccion-3" class="tabs-contents-item d-none">
                         <h1><span>Historial de transacciones</span></h1>
-                        <p>Ultimas transacciones realizadas</p>
+                        <p>Ultima transacción realizada</p>
                         <table>
                             <tr>
+                                <td>
+                                    Destinatario (E-mail):
+                                </td>
                                 <td>
                                     Cantidad:
                                 </td>
@@ -149,26 +171,41 @@
                                     Fecha:
                                 </td>
                             </tr>
-                            <tr>
-                                <td>
-                                    <?php
+                            <?php
+                                for($i=0;$i<1;$i++) {
+                                    echo'<tr>';
+                                    echo'<td>';
+                                        $sql = "SELECT users.email from users join transactions on 
+                                        users.pk_user = transactions.fk_receiver 
+                                        where transactions.fk_sender = 
+                                            (SELECT users.pk_user 
+                                            from users 
+                                            where    
+                                            users.username 
+                                            LIKE '$username')
+                                            ORDER BY users.pk_user DESC LIMIT 1";
+                                        $result = $db->query($sql);
+                                        // var_dump($result);
+                                        // echo $username;
+                                        while ($row = $result->fetch_array()) {
+                                            echo $row[$i];
+                                        }
                                         
+                                    echo'</td>';
+                                    echo'<td>';
                                         $sql = "SELECT transactions.amount
                                                 FROM users
                                                 INNER JOIN transactions ON users.pk_user=transactions.fk_sender
                                                 WHERE users.username = '$username' 
-                                                ORDER BY transactions.pk_transaction DESC  LIMIT 1";
+                                                ORDER BY transactions.pk_transaction DESC LIMIT 1";
 
                                         $result = $db->query($sql);
                                         // echo $username;
-                                        while ($row = $result->fetch_assoc()) {
-                                            echo $row['amount'];
+                                        while ($row = $result->fetch_array()) {
+                                            echo $row[$i];
                                         }
-                                    ?>
-                                </td>
-                                <td>
-                                    <?php
-                                        
+                                    echo'</td>';
+                                    echo'<td>';
                                         $sql = "SELECT transactions.date
                                                 FROM users
                                                 INNER JOIN transactions ON users.pk_user=transactions.fk_sender
@@ -177,23 +214,44 @@
 
                                         $result = $db->query($sql);
                                         // echo $username;
-                                        while ($row = $result->fetch_assoc()) {
-                                            echo $row['date'];
+                                        while ($row = $result->fetch_array()) {
+                                            echo $row[$i];
                                         }
-                                    ?>
-                                </td>
-                            </tr>
+                                    echo'</td>';
+                                echo'</tr>';
+                                }
+                            ?>
                         </table>
                     </div>
                     <div id="seccion-4" class="tabs-contents-item d-none">
                         <h1><span>Depositar Fondos</span></h1>
                         <p>Para depositar fondos, ingrese los datos de la tarjeta de crédito e introduzca el monto a recargar</p>
+                        <table>
+                            <tr>
+                                <td>Saldo:</td>
+                                <td>
+                                    <?php
+                                        $username = $_SESSION['username'];
+
+                                        $sql = "SELECT balance FROM users WHERE username = '$username' ";
+
+                                        $result = $db->query($sql);
+                                        // echo $username;
+                                        while ($row = $result->fetch_assoc()) {
+                                            echo $row['balance']." Bs";
+                                        }
+                                    ?>
+                                </td>
+                            </tr>
+                        </table>
                         <form id="sendForm" action="home.php" method="POST">
                             <label>Número de tarjeta de crédito</label>
                             <input type="text" name="tdc" value="">
                             <label>Cantidad a depositar</label>
                             <input type="text" name="deposit" value="" required>
-                            <button type="submit" class="primary-btn" name="depositFund">Enviar</button>
+                            <div class="deposit-buttoms">
+                                <button type="submit" class="primary-btn" name="depositFund">Enviar</button>
+                            </div>
                         </form>
                     </div>
                         
